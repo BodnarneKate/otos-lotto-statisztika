@@ -1,0 +1,90 @@
+body {
+    width: 97vw;
+    margin: 0.5vw 3vw;
+    font-family: sans-serif;
+}
+
+.container {
+    width: 40vw;
+    float: left;
+    position: relative;
+}
+
+header {
+    margin-bottom: -0.2vw;
+}
+
+header img {
+    max-width: 32vw;
+    height: auto;
+    opacity: 0.8;
+}
+
+.center {
+    position: absolute;
+    top: 22%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: azure;
+    text-shadow: 2px 2px 4px #000000;   
+}
+
+.green {
+	position: absolute;
+    top: 22%;
+    left: 38%;
+    transform: translate(-50%, -50%);
+    width: 16vw;
+    height: 16vw;
+	max-width: 16vw;
+    max-height: 16vw;
+    border-radius: 50%;
+	background-color:darkcyan;     
+}
+
+navbar li {
+    font-size: 1.5em;
+    padding: 1vw;
+    border-bottom: 1px groove lightgrey;
+    width: 28vw;
+    color: azure;
+    text-shadow: 2px 2px 4px #000000;
+}
+
+navbar ul {
+    list-style-type: none;
+    padding-left: 1vw;
+    margin: 0;
+    background-color:dimgrey;
+    max-width: 31vw;
+}
+
+main {
+    float: left;
+    width: 50vw;
+    min-width: 45vw;
+    color: black;
+    text-shadow: 2px 2px 4px lightgrey;
+}
+
+main h1 {
+    font-size: 3.5em;
+}
+
+main h2 {
+    font-size: 2.3em;
+    margin: 2vw 0;
+}
+
+main img {
+    max-width: 8vw;
+    height: auto;
+    opacity: 0.8;
+}
+
+main div {
+    margin: 4vw 0;
+}
+
