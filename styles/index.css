@@ -121,7 +121,7 @@ span.giant {
     text-align: center;
 }
 
-.up-num,.down-num {
+.up-num,.down-num,.prev-num,.last-num,.freq-num {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -132,7 +132,10 @@ span.giant {
     font-size: 1.9em;
 }
 
-.down {
+.freq-num {
+    left: 40%;
+}
+.down,.last {
     clear: both;
     padding-top: 1vw;
 }
