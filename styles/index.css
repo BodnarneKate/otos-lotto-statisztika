@@ -93,7 +93,7 @@ main img {
     opacity: 0.8;
 }
 
-main div.prev,main div.last {
+main div.prev,main div.last,main div.up,main div.down {
     margin: 4vw 0;
 }
 
