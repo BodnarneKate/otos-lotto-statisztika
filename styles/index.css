@@ -93,7 +93,7 @@ main img {
     opacity: 0.8;
 }
 
-main div.prev,main div.last,main div.up,main div.down {
+main div.prev,main div.last,main div.up,main div.down,main div.long1,main div.long2,main div.long3 {
     margin: 4vw 0;
 }
 
@@ -121,7 +121,7 @@ span.giant {
     text-align: center;
 }
 
-.up-num,.down-num,.prev-num,.last-num,.freq-num {
+.up-num,.down-num,.prev-num,.last-num,.freq-num,.long1-num,.long2-num,.long3-num {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -135,7 +135,7 @@ span.giant {
 .freq-num {
     left: 40%;
 }
-.down,.last {
+.down,.last,.long2,.long3 {
     clear: both;
     padding-top: 1vw;
 }
