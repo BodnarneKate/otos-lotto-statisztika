@@ -121,7 +121,7 @@ span.giant {
     text-align: center;
 }
 
-.up-num,.down-num,.prev-num,.last-num,.freq-num,.long1-num,.long2-num,.long3-num {
+.up-num,.down-num,.prev-num,.last-num,.freq-num,.long1-num,.long2-num,.long3-num,.sum1-num,.sum2-num,.sum3-num {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -135,7 +135,7 @@ span.giant {
 .freq-num {
     left: 40%;
 }
-.down,.last,.long2,.long3 {
+.down,.last,.long2,.long3,.sum2,.sum3 {
     clear: both;
     padding-top: 1vw;
 }
