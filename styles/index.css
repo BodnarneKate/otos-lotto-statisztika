@@ -93,7 +93,7 @@ main img {
     opacity: 0.8;
 }
 
-main div.prev,main div.last,main div.up,main div.down,main div.long1,main div.long2,main div.long3 {
+main div.prev,main div.last,main div.up,main div.down,main div.long1,main div.long2,main div.long3,main div.sum1,main div.sum2,main div.sum3 {
     margin: 4vw 0;
 }
 
