@@ -11,18 +11,28 @@ class Controller {
         });
     }
 
-    getList() {
+    get list() {
         return this._list;
     }
 
-    list() {
+    doList() {
         console.log(this._list);
+    }
+
+    defineLastTwoWeeksWinnerNumbers(){
+        let listCopy = [...(this._list)];
+        listCopy.sort((a, b) => b.huzas_ideje - a.huzas_ideje);
+        const last = listCopy.shift();
+        const lastButOne = listCopy.shift();
+
+        console.log(last, lastButOne);
     }
 
 
     static main() {
         const c = new Controller();
-        c.list();
+        // c.doList();
+        c.defineLastTwoWeeksWinnerNumbers();
     }
 
 }
