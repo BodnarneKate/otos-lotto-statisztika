@@ -1,5 +1,4 @@
 class Controller {
-
     _list = [];
 
     constructor() {
@@ -19,25 +18,20 @@ class Controller {
         console.log(this._list);
     }
 
-    defineLastTwoWeeksWinnerNumbers(){
+    defineLastAndPrevWeeksWinnerNumbers() {
         let listCopy = [...(this._list)];
         listCopy.sort((a, b) => b.huzas_ideje - a.huzas_ideje);
         const last = listCopy.shift();
-        const lastButOne = listCopy.shift();
+        const prev = listCopy.shift();
 
-        console.log(last, lastButOne);
+        // console.log(last.huzott_szamok.sort(), prev.huzott_szamok.sort());
+
+        return {
+            last: last.huzott_szamok.sort(),
+            prev: prev.huzott_szamok.sort()
+        };
     }
-
-
-    static main() {
-        const c = new Controller();
-        // c.doList();
-        c.defineLastTwoWeeksWinnerNumbers();
-    }
-
 }
-
-Controller.main();
 
 
 

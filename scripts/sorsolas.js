@@ -6,7 +6,7 @@ class Sorsolas {
     negytalalat = {};
     haromtalalat = {};
     kettalalat = {};
-    szamok = [];
+    _huzott_szamok = [];
 
     constructor(line) {
         this.parseLine(line);
@@ -33,6 +33,12 @@ class Sorsolas {
         this.kettalalat.db = parseInt(splitted[9]);
         this.kettalalat.ertek = Utils.parseCurrencyStringtoInt(splitted[10]);
 
-        this.szamok.push(parseInt(splitted[11]), parseInt(splitted[12]), parseInt(splitted[13]), parseInt(splitted[14]), parseInt(splitted[15]))
+        this._huzott_szamok.push(parseInt(splitted[11]), parseInt(splitted[12]), parseInt(splitted[13]), parseInt(splitted[14]), parseInt(splitted[15]))
     }
+
+    get huzott_szamok(){
+        return this._huzott_szamok;
+    }
+
+
 }
