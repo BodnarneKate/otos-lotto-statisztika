@@ -20,11 +20,24 @@ class UIPresenter {
         });
     }
 
+    showMostTimesWinnerNumbers() {
+        const {first, second, third} = this.controller.calculateMostTimesWinnerNumbers();
+        // console.log(first, second, third);
+        $('#freq-num1').html(first.number);
+        $('#num-1').html(first.count);
+        $('#freq-num2').html(second.number);
+        $('#num-2').html(second.count);
+        $('#freq-num3').html(third.number);
+        $('#num-3').html(third.count);
+    }
+
     static main() {
         const ui = new UIPresenter(new Controller());
 
         ui.showLastAndPreviousLotteries();
+        ui.showMostTimesWinnerNumbers();
     }
+
 }
 
 UIPresenter.main();
