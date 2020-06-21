@@ -72,7 +72,44 @@ class Controller {
             }
         }
     }
+
+    searchMostSimilarNumbers() {
+        let mostSimilarNumbersCnt = 0;
+        let idx1, idx2;
+
+        for (let i = 0; i < this._list.length - 1; i++) {
+            for (let j = i + 1; j < this._list.length; j++) {
+                const sameCnt = this._calcSameNumbers(this._list[i].huzott_szamok, this._list[j].huzott_szamok);
+
+                if (sameCnt > mostSimilarNumbersCnt) {
+                    mostSimilarNumbersCnt = sameCnt;
+                    idx1 = i;
+                    idx2 = j;
+                }
+            }
+        }
+
+        return {
+            mostSimilarUp: this._list[idx1],
+            mostSimilarDown: this._list[idx2]
+        }
+    }
+
+    _calcSameNumbers(szamok1, szamok2) {
+        let sameCnt = 0;
+
+        let k = 0;
+        while (k < 5) {
+            let l = 0;
+            while (l < 5) {
+                if (szamok1[k] == szamok2[l]) {
+                    sameCnt++;
+                }
+                l++;
+            }
+            k++;
+        }
+
+        return sameCnt;
+    }
 }
-
-
-
