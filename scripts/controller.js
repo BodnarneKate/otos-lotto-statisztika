@@ -2,7 +2,6 @@ class Controller {
     _list = [];
 
     constructor() {
-
         const lines = csv_raw_data.split('\n');
 
         lines.forEach((line) => {
@@ -95,6 +94,31 @@ class Controller {
         }
     }
 
+    defineTheSmallestOfThreeSum(){
+        let listCopy = [...(this._list)];
+
+        listCopy.sort((a, b) => {
+            return a.sumOfWinnerNumbers() - b.sumOfWinnerNumbers();
+        });
+
+        let firstThree = listCopy.slice(0, 3);
+
+        return {
+            first: {
+                numbers: firstThree[0].huzott_szamok,
+                sum: firstThree[0].sumOfWinnerNumbers()
+            },
+            second: {
+                numbers: firstThree[1].huzott_szamok,
+                sum: firstThree[1].sumOfWinnerNumbers()
+            },
+            third: {
+                numbers: firstThree[2].huzott_szamok,
+                sum: firstThree[2].sumOfWinnerNumbers()
+            }
+        }
+    }
+
     _calcSameNumbers(szamok1, szamok2) {
         let sameCnt = 0;
 
@@ -112,4 +136,6 @@ class Controller {
 
         return sameCnt;
     }
+
+
 }

@@ -36,9 +36,18 @@ class Sorsolas {
         this._huzott_szamok.push(parseInt(splitted[11]), parseInt(splitted[12]), parseInt(splitted[13]), parseInt(splitted[14]), parseInt(splitted[15]))
     }
 
+    sumOfWinnerNumbers(){
+        let sum = 0;
+        this._huzott_szamok.forEach((value) => {
+           sum += value;
+        });
+
+        return sum;
+    }
+
+
     get huzott_szamok(){
         return this._huzott_szamok;
     }
-
 
 }

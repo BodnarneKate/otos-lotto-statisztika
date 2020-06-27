@@ -47,14 +47,28 @@ class UIPresenter {
         }
     }
 
+    showTheSmallestOfThree() {
+        const {first, second, third} = this.controller.defineTheSmallestOfThreeSum();
+
+        $('#sum1 > span').html(first.sum);
+        $('#sum2 > span').html(second.sum);
+        $('#sum3 > span').html(third.sum);
+
+        for (let i = 1; i <= 5; i++) {
+            $('#sum1-num' + i).html(first.numbers[i - 1]);
+            $('#sum2-num' + i).html(second.numbers[i - 1]);
+            $('#sum3-num' + i).html(third.numbers[i - 1]);
+        }
+    }
+
     static main() {
         const ui = new UIPresenter(new Controller());
 
         ui.showLastAndPreviousLotteries();
         ui.showMostTimesWinnerNumbers();
         ui.showMostSimilarNumber();
+        ui.showTheSmallestOfThree();
     }
-
 }
 
 UIPresenter.main();
