@@ -136,6 +136,4 @@ class Controller {
 
         return sameCnt;
     }
-
-
 }
